@@ -68,7 +68,7 @@ jobs:
       - name: Run Omar Gate (PR managed)
         if: github.event_name == 'pull_request'
         id: omar_pr
-        uses: mrrCarter/sentinelayer-v1-action@03d7369cba7de2e9f15b959275c982111f0ee493
+        uses: mrrCarter/sentinelayer-v1-action@55a2c158f637d7d92e26ab0ef3ba81db791da4be
         with:
           github_token: ${{ github.token }}
           sentinelayer_token: ${{ secrets.SENTINELAYER_TOKEN }}
@@ -82,7 +82,7 @@ jobs:
       - name: Run Omar Gate (manual BYOK)
         if: github.event_name == 'workflow_dispatch'
         id: omar_manual
-        uses: mrrCarter/sentinelayer-v1-action@03d7369cba7de2e9f15b959275c982111f0ee493
+        uses: mrrCarter/sentinelayer-v1-action@55a2c158f637d7d92e26ab0ef3ba81db791da4be
         with:
           github_token: ${{ github.token }}
           sentinelayer_token: ${{ secrets.SENTINELAYER_TOKEN }}
